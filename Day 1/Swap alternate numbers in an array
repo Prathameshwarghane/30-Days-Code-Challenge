@@ -1,0 +1,29 @@
+Swap alternate numbers in an array
+
+#include <iostream>
+using namespace std;
+int swapalternate(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        if (i + 1 < n)
+        {
+            swap(arr[i], arr[i + 1]);
+            i++;
+        }
+    }
+}
+int printarr(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << "\n";
+}
+int main()
+{
+    int arr[5] = {1, 2, 3, 4, 5};
+    swapalternate(arr, 5);
+    printarr(arr, 5);
+}
